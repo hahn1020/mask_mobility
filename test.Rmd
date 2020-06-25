@@ -1,0 +1,36 @@
+---
+title: "Import Mobility Data"
+author: "David J. Vanness"
+date: "6/23/2020"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import Mobility Dataset at US County Level
+
+We are importing our data.
+
+```{r include=FALSE}
+rm(list = ls())
+
+setwd("C:/Users/hanna/Desktop/COVID19 Mask")
+
+install.packages("tidyverse")
+library(tidyverse)
+
+in_file_mobility = read_csv(file = "Mobility_Report_US.csv",col_names = TRUE, col_types = NULL)
+in_file_policy = read_csv(file = "USstatesCov19distancingpolicy.csv",col_names = TRUE,col_types = NULL)
+
+```
+#find out which state implemented mask policies =1 and 0 and when their mask policies began 
+#create a dummy variable to indicate time when the mask policies started 
+#create a dummy variable to identify the control and treatment group 
+#create an interaction between time and treated 
+
+
+
